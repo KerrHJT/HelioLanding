@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Driftbound | Official Game Site</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #0ac8b9;
+      --secondary: #cdfafa;
+      --accent: #f0e6d2;
+      --dark: #1e2328;
+      --darker: #010a13;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--darker);
+      color: var(--accent);
+      overflow-x: hidden;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(0deg, rgba(1, 10, 19, 1) 0%, rgba(1, 10, 19, 0.8) 50%, rgba(1, 10, 19, 0.2) 100%);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--darker);
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="min-h-screen">
+  <!-- Background Music -->
+  <audio autoplay loop id="bg-music">
+    <source src="bg.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bgMusic = document.getElementById("bg-music");
+      if (bgMusic) {
+        bgMusic.volume = 0.4;
+      }
+    });
+  </script>
+
+  <!-- Navigation -->
+  <nav class="bg-black bg-opacity-80 fixed w-full z-50 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo with Text -->
+        <div class="flex-shrink-0 flex items-center space-x-2">
+          <img src="Logo.png" alt="Driftbound logo" class="h-8" />
+          <div class="text-white leading-tight font-bold text-sm md:text-base">
+            DRIFT <span class="text-[var(--primary)]">BOUND</span>
+          </div>
+        </div>
+
+        <!-- Main Nav -->
+        <div class="hidden md:block">
+          <div class="ml-10 flex items-center space-x-8">
+            <a href="#game" class="text-white hover:text-[var(--primary)] px-3 py-2 text-sm font-medium">GAME</a>
+            <a href="#news" class="text-white hover:text-[var(--primary)] px-3 py-2 text-sm font-medium">NEWS</a>
+            <a href="#buy-now" class="text-white hover:text-[var(--primary)] px-3 py-2 text-sm font-medium">BUY NOW</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center">
+    <div class="w-full h-full absolute overflow-hidden">
+      <video autoplay muted loop playsinline class="w-full h-full object-cover">
+        <source src="WhatsApp%20Video%202025-07-30%20at%2016.43.59_fad0c2b7.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-gradient absolute inset-0"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
+        WELCOME TO <span class="text-[var(--primary)]">DRIFTBOUND</span>
+      </h1>
+      <p class="text-xl text-[var(--secondary)] mb-8">
+        Embark on an epic single-player adventure. Master unique skills, solve puzzles, and explore a vast world.
+      </p>
+      <div class="flex justify-center">
+        <button class="btn-primary px-8 py-3 rounded-md text-lg font-bold">PLAY FOR FREE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Section -->
+  <section id="game" class="pt-24 pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">About Driftbound</h2>
+      <p class="text-lg text-[var(--secondary)] mb-8">
+        Driftbound is a captivating single-player game where you navigate through stunning landscapes, face challenging enemies, and uncover the mysteries of the Driftbound world.
+      </p>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="pt-24 pb-20 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">Latest News</h2>
+      <p class="text-lg text-[var(--secondary)] mb-8">
+        Stay updated with the latest news and updates about Driftbound.
+      </p>
+      <div class="flex justify-center">
+        <div class="max-w-md bg-[var(--dark)] p-6 rounded-lg shadow-lg">
+          <img src="concept.jpg" alt="Character Concept Art" class="rounded mb-4"/>
+          <h3 class="text-2xl font-bold text-white mb-2">Character Reveal</h3>
+          <p class="text-[var(--secondary)] mb-2">Introducing one of the early concept characters coming to Driftbound.</p>
+          <span class="text-yellow-400 font-semibold">The game is still in Pre-Alpha!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy Now Section -->
+  <section id="buy-now" class="pt-24 pb-20 bg-[var(--dark)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold text-white mb-4">Get Driftbound</h2>
+      <p class="text-lg text-[var(--secondary)] mb-8">
+        Available now on all major platforms. Choose your edition and start your adventure today!
+      </p>
+      <div class="flex justify-center space-x-4">
+        <button class="btn-primary px-6 py-3 rounded-md text-base">BUY NOW</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-400">© 2023 Heliosoul Games. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
